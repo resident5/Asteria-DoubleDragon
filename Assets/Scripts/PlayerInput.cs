@@ -7,15 +7,23 @@ using UnityEngine.InputSystem;
 public class PlayerInput : MonoBehaviour
 {
     public CharacterMovement characterMovement;
+    public CharacterAttack characterAttack;
     public Player1Inputs input = null;
     private Vector2 moveVector = Vector2.zero;
     public Animator animator;
 
+    public bool running = false;
+
+    public float doubleTapTimeDelay = 0.8f;
+    public float timeSinceLastTap;
+    public bool doubleTapped;
+
+    float currentTime = 0;
 
     private void Awake()
     {
         characterMovement = GetComponent<CharacterMovement>();
-        animator = GetComponent<Animator>();
+        characterAttack = GetComponent<CharacterAttack>();
         input = new Player1Inputs();
     }
 
@@ -26,14 +34,13 @@ public class PlayerInput : MonoBehaviour
         input.Player.Movement.canceled += OnMovementCancelled;
         input.Player.Jump.performed += OnJumpPerformed;
         input.Player.Jump.canceled += OnJumpCancelled;
-    }
+        input.Player.PAttack.performed += OnPAttackPerformed;
+        input.Player.PAttack.canceled += OnPAttackPerformed;
+        //input.Player.DoubleTap.performed += OnDoubleTapPerformed;
+        //input.Player.DoubleTap.canceled += OnDoubleTapCancelled;
+        input.Player.HoldTap.performed += OnHoldPerformed;
+        input.Player.HoldTap.canceled += OnHoldCancelled;
 
-    private void OnJumpPerformed(InputAction.CallbackContext obj)
-    {
-    }
-
-    private void OnJumpCancelled(InputAction.CallbackContext obj)
-    {
     }
 
     private void OnDisable()
@@ -43,16 +50,81 @@ public class PlayerInput : MonoBehaviour
         input.Player.Movement.canceled -= OnMovementCancelled;
         input.Player.Jump.performed -= OnJumpPerformed;
         input.Player.Jump.canceled -= OnJumpCancelled;
-    }
+        input.Player.PAttack.performed -= OnPAttackPerformed;
+        input.Player.PAttack.canceled -= OnPAttackPerformed;
+        //input.Player.DoubleTap.performed -= OnDoubleTapPerformed;
+        //input.Player.DoubleTap.canceled -= OnDoubleTapCancelled;
+        input.Player.HoldTap.performed -= OnHoldPerformed;
+        input.Player.HoldTap.canceled -= OnHoldCancelled;
 
-    private void Update()
-    {
+
     }
 
     private void FixedUpdate()
     {
-        characterMovement.Move(moveVector.x, moveVector.y, false);
-        Debug.Log(moveVector);
+        characterMovement.Move(moveVector.x, moveVector.y, running);
+    }
+
+    private void OnJumpPerformed(InputAction.CallbackContext value)
+    {
+        if (input != null)
+        {
+            characterMovement.jump = true;
+            animator.SetBool("jump",true);
+        }
+    }
+
+    private void OnJumpCancelled(InputAction.CallbackContext value)
+    {
+        characterMovement.jump = false;
+        animator.SetBool("jump", false);
+    }
+
+    void OnDoubleTapPerformed(InputAction.CallbackContext context)
+    {
+        if (input != null)
+        {
+            Debug.Log("Tapped");
+        }
+    }
+
+    void OnDoubleTapCancelled(InputAction.CallbackContext context)
+    {
+        Debug.Log("Untapped");
+
+
+    }
+
+    void OnHoldPerformed(InputAction.CallbackContext context)
+    {
+        if (input != null)
+        {
+            currentTime = Time.time;
+            if (currentTime - timeSinceLastTap <= doubleTapTimeDelay)
+            {
+                doubleTapped = true;
+                running = true;
+                animator.SetBool("run", true);
+                animator.SetBool("move", false);
+            }
+
+            timeSinceLastTap = currentTime;
+
+            //if (doubleTapped)
+            //{
+            //    Debug.Log("Holding");
+
+            //    running = true;
+            //}
+        }
+    }
+
+    void OnHoldCancelled(InputAction.CallbackContext context)
+    {
+        running = false;
+        doubleTapped = false;
+        animator.SetBool("run", false);
+
     }
 
     public void OnMovementPerformed(InputAction.CallbackContext value)
@@ -69,4 +141,19 @@ public class PlayerInput : MonoBehaviour
         moveVector = Vector2.zero;
         animator.SetBool("move", false);
     }
+
+    void OnPAttackPerformed(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            characterAttack.Attack();
+        }
+    }
+
+    void OnPAttackCancelled(InputAction.CallbackContext value)
+    {
+
+    }
+
+
 }

@@ -46,6 +46,33 @@ namespace UnityEngine.InputSystem
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DoubleTap"",
+                    ""type"": ""Button"",
+                    ""id"": ""b9f1e533-2792-4a17-91d0-2311bdaa4fe8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""HoldTap"",
+                    ""type"": ""Button"",
+                    ""id"": ""bfff4c57-21e1-45be-aef0-613158a10d50"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""P Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""6302a8ac-0df9-4efc-b4b2-bb707958c66d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -72,12 +99,12 @@ namespace UnityEngine.InputSystem
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""up"",
-                    ""id"": ""8180e8bd-4097-4f4e-ab88-4523101a6ce9"",
-                    ""path"": ""<Keyboard>/upArrow"",
+                    ""name"": ""left"",
+                    ""id"": ""d2581a9b-1d11-4566-b27d-b92aff5fabbc"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
+                    ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -94,9 +121,9 @@ namespace UnityEngine.InputSystem
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""down"",
-                    ""id"": ""1c5327b5-f71c-4f60-99c7-4e737386f1d1"",
-                    ""path"": ""<Keyboard>/downArrow"",
+                    ""name"": ""right"",
+                    ""id"": ""fcfe95b8-67b9-4526-84b5-5d0bc98d6400"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
@@ -105,12 +132,12 @@ namespace UnityEngine.InputSystem
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""left"",
-                    ""id"": ""d2581a9b-1d11-4566-b27d-b92aff5fabbc"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""name"": ""up"",
+                    ""id"": ""8180e8bd-4097-4f4e-ab88-4523101a6ce9"",
+                    ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
+                    ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -121,18 +148,18 @@ namespace UnityEngine.InputSystem
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
+                    ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""right"",
-                    ""id"": ""fcfe95b8-67b9-4526-84b5-5d0bc98d6400"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""name"": ""down"",
+                    ""id"": ""1c5327b5-f71c-4f60-99c7-4e737386f1d1"",
+                    ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
+                    ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -156,6 +183,61 @@ namespace UnityEngine.InputSystem
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""128e253d-6ca8-4c86-ba02-cf3b41be9499"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""DoubleTap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2598aff6-c89a-4942-ace2-5592e9fa0a1c"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""DoubleTap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dc1bbec9-8c2d-4fb3-b9ac-bfeb7c78c365"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": ""Hold(duration=0.05)"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""HoldTap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0a9bffcf-f22f-4164-9410-31cef3f3cbf1"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": ""Hold(duration=0.05)"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""HoldTap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b8e287e4-82c3-4ebe-83bd-b8def85435db"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""P Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -745,6 +827,9 @@ namespace UnityEngine.InputSystem
             m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
             m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
             m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+            m_Player_DoubleTap = m_Player.FindAction("DoubleTap", throwIfNotFound: true);
+            m_Player_HoldTap = m_Player.FindAction("HoldTap", throwIfNotFound: true);
+            m_Player_PAttack = m_Player.FindAction("P Attack", throwIfNotFound: true);
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -818,12 +903,18 @@ namespace UnityEngine.InputSystem
         private IPlayerActions m_PlayerActionsCallbackInterface;
         private readonly InputAction m_Player_Movement;
         private readonly InputAction m_Player_Jump;
+        private readonly InputAction m_Player_DoubleTap;
+        private readonly InputAction m_Player_HoldTap;
+        private readonly InputAction m_Player_PAttack;
         public struct PlayerActions
         {
             private @Player1Inputs m_Wrapper;
             public PlayerActions(@Player1Inputs wrapper) { m_Wrapper = wrapper; }
             public InputAction @Movement => m_Wrapper.m_Player_Movement;
             public InputAction @Jump => m_Wrapper.m_Player_Jump;
+            public InputAction @DoubleTap => m_Wrapper.m_Player_DoubleTap;
+            public InputAction @HoldTap => m_Wrapper.m_Player_HoldTap;
+            public InputAction @PAttack => m_Wrapper.m_Player_PAttack;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -839,6 +930,15 @@ namespace UnityEngine.InputSystem
                     @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                     @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                     @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                    @DoubleTap.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDoubleTap;
+                    @DoubleTap.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDoubleTap;
+                    @DoubleTap.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDoubleTap;
+                    @HoldTap.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHoldTap;
+                    @HoldTap.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHoldTap;
+                    @HoldTap.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHoldTap;
+                    @PAttack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPAttack;
+                    @PAttack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPAttack;
+                    @PAttack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPAttack;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -849,6 +949,15 @@ namespace UnityEngine.InputSystem
                     @Jump.started += instance.OnJump;
                     @Jump.performed += instance.OnJump;
                     @Jump.canceled += instance.OnJump;
+                    @DoubleTap.started += instance.OnDoubleTap;
+                    @DoubleTap.performed += instance.OnDoubleTap;
+                    @DoubleTap.canceled += instance.OnDoubleTap;
+                    @HoldTap.started += instance.OnHoldTap;
+                    @HoldTap.performed += instance.OnHoldTap;
+                    @HoldTap.canceled += instance.OnHoldTap;
+                    @PAttack.started += instance.OnPAttack;
+                    @PAttack.performed += instance.OnPAttack;
+                    @PAttack.canceled += instance.OnPAttack;
                 }
             }
         }
@@ -1007,6 +1116,9 @@ namespace UnityEngine.InputSystem
         {
             void OnMovement(InputAction.CallbackContext context);
             void OnJump(InputAction.CallbackContext context);
+            void OnDoubleTap(InputAction.CallbackContext context);
+            void OnHoldTap(InputAction.CallbackContext context);
+            void OnPAttack(InputAction.CallbackContext context);
         }
         public interface IUIActions
         {

@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -76,9 +76,1545 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1162
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe585060de50ae42b1b70041d40cbfa
+      internalID: -711936499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 1162
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2901af23f347594ab85f1a329d4edc6
+      internalID: -1786388496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 1162
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c812d171b7e98324f8d0296bfd5bafb1
+      internalID: 1876187003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1162
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f1e64b9d3fc5640a201b77b7a9f3d8
+      internalID: 1937837431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_4
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1162
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d081454d16d85fd44b68e6c9c1769ff2
+      internalID: -301565328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_5
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 1162
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230bf8a0047f3634dbd8c533c028646c
+      internalID: -1329427585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_6
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 1162
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059b73c818b379d488bfb11ffcfc42ef
+      internalID: 849229598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_7
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 1162
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c1ff8eb9478e8047b933368d04bc4a0
+      internalID: 1594461471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_8
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 1162
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6384a83bb871b408799ce921a232f7
+      internalID: -393339857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 996
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798dd65cfb3e8d440800514c2cdd475e
+      internalID: 1454312950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_10
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 996
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ff86cbbba4d8340acb29e2f175ea43
+      internalID: -419248723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_11
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 996
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01a39451169e06489c61ed286c66954
+      internalID: 1207189544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_12
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 996
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7753e541a12d5f4297695feaf7835bc
+      internalID: 257867813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_13
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 996
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0393d528265c04abd17e2ca51774df
+      internalID: 1574547825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_14
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 996
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544a6679ac6942c4eb74c50cb6d54ec0
+      internalID: -1043084714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_15
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 996
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5491ca786cd9e8a47b0af8c2ec7a331c
+      internalID: 1520982770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_16
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 996
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bcb01a9616056f41832ea499499120d
+      internalID: -990197310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_17
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 996
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885b3ef1dd4e08a4db7a818d6187ffc0
+      internalID: 1392444170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 830
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445a4ab09a06de648be921ea00c4b748
+      internalID: -1393630323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_19
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 830
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cae1c4e8d2c18b4582d7cf4e8e79389
+      internalID: 1086284976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_20
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 830
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c525074ca3ca4ac48b9de3d4b5dc14b2
+      internalID: -723278155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_21
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 830
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038975cee6a141941bef0aabe261e21a
+      internalID: 637934437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_22
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 830
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c458d12a034774b8288d569b0d3cf4
+      internalID: -1328098437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_23
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 830
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced379b34e3691e4699d628ca43d6feb
+      internalID: 1898443676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_24
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 830
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3c0fe1570edd948bef1d02c5b11938
+      internalID: -1042027452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_25
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 830
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930396ef37f34b24fa5b46dd8068851d
+      internalID: -1082766219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_26
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 830
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 163032a515114784ea4669e271358787
+      internalID: -2064447699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 664
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48f491c67f097f41ae0f175608ac147
+      internalID: -691522005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_28
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 664
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97aa4f65a0824a04e99c57f7af7ab18c
+      internalID: -172352861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_29
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 664
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac6d590e456a7e448c05616e6909412
+      internalID: 1412331662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_30
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 664
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65cd3a77ea9866447a3f534a44068b05
+      internalID: 333741423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_31
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 664
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fecd51c40b7ed2c4c92d11527153f5d7
+      internalID: 407439736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_32
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 664
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b5f838e0dd7d9429cbf3726e142ecb
+      internalID: -1329906690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_33
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 664
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e06b74368862a4c9d29b200b4c08ed
+      internalID: 1151021992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_34
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 664
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae540974797a344baa2aaa0e442201a
+      internalID: -1171318720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_35
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 664
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d235920887e0074f9b8db127b74a26b
+      internalID: -1823180976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 498
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47d1f466635b294d8635d90596589a7
+      internalID: 1011232739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_37
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 498
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e370b3b293c170418e67d7b032544ec
+      internalID: -1066271437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_38
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 498
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddf8b51f74dac84eb263b6c0682266e
+      internalID: 109493626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_39
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 498
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d1492dc425b304cbc1808a2ebce977
+      internalID: -498492196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_40
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 498
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90addaec52d6d0c4ea16791f2b7d24a4
+      internalID: 1678163604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_41
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 498
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95aab44ab59df3949aa581ad4754f8b7
+      internalID: -1779113641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_42
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 498
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f014a607a76d74eaeb62ecbbd72d7a
+      internalID: -50444020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_43
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 498
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08d2664107ebf54982cc762f78137ea
+      internalID: 190706546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_44
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 498
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa48988e5cfa1f4ead339dcca39e1d9
+      internalID: -1071445418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 332
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2f8d30a02dc324983b6ec9c567f892
+      internalID: 201829963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_46
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 332
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b89a5c5cb25baf47b2d97821af08f11
+      internalID: 1794901933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_47
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 332
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6fd2b47971f2a4d9b13a3410116c2f
+      internalID: 735404995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_48
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 332
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 614bbc48a47a9d84cac7552cc2c38e12
+      internalID: 1995956964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_49
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 332
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40654d8fe71573341bdc480fe3e327ff
+      internalID: 2042984041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_50
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 332
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcda1b8dcadc54f4384af886587a9c66
+      internalID: 1594812447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_51
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 332
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3245c80c9598a954e88992f3c0261c76
+      internalID: 241624932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_52
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 332
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6635e3cbb9c2494eac4eb6d033b935b
+      internalID: 456244014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_53
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 332
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe83d076eb15ab478dd3545c4450f1d
+      internalID: -2088080106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 166
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d7c8ce7fc80c5419394941aa08469e
+      internalID: -186068515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_55
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 166
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf21637136a0bb419a3192299b3a664
+      internalID: 96459315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_56
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 166
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749b89e23dcca514981e480be7735ef5
+      internalID: -1644808493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_57
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 166
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb67525aeaa61c4c9e7736b361cfa11
+      internalID: 949812655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_58
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 166
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8669b437da6b0f40b4d919e42b652b1
+      internalID: 820741335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_59
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 166
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e206b3d163b1d4c84a55d9c2fe22c6
+      internalID: 709688274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_60
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 166
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fbd47e509e8ad48bc6fc8ea3b46086
+      internalID: -1287027445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_61
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 166
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f2b037f3117fc4f81cc7c71c63a30c
+      internalID: 957104700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_62
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 166
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b8e07caff88d640bb3ddb34efdd9ab
+      internalID: -1890240628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033675efe56f8b44681d45f97d012ba3
+      internalID: 238594375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_64
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 0
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061ee4bbcaef59a409f02c8f2f858ba3
+      internalID: 507865134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_65
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 0
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b944fd46bfcf454e8c747fe59bf8ed1
+      internalID: -488057872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_66
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 0
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536c7bfff48bf524697f781186465d4b
+      internalID: -1109183400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_67
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 0
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f41eb364bb8f57c4291b15cf42bf49c0
+      internalID: 227414502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_68
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 0
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6353adab1fa950498d6e191c386e1ce
+      internalID: -1751407972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_69
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 0
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8fdc7eda4df0742a837481fb73e3e9
+      internalID: -1188819162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_70
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 0
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95d0d6aa881c78429ff0355b0fdc614
+      internalID: -1119890166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_Bartender_Attack_71
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 0
+        width: 223
+        height: 166
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb89648c77b8114e9d4afa54ad2826a
+      internalID: -123958494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +1625,79 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sheet_Bartender_Attack_10: -419248723
+      sheet_Bartender_Attack_62: -1890240628
+      sheet_Bartender_Attack_60: -1287027445
+      sheet_Bartender_Attack_25: -1082766219
+      sheet_Bartender_Attack_23: 1898443676
+      sheet_Bartender_Attack_67: 227414502
+      sheet_Bartender_Attack_24: -1042027452
+      sheet_Bartender_Attack_51: 241624932
+      sheet_Bartender_Attack_21: 637934437
+      sheet_Bartender_Attack_45: 201829963
+      sheet_Bartender_Attack_12: 257867813
+      sheet_Bartender_Attack_55: 96459315
+      sheet_Bartender_Attack_61: 957104700
+      sheet_Bartender_Attack_66: -1109183400
+      sheet_Bartender_Attack_48: 1995956964
+      sheet_Bartender_Attack_54: -186068515
+      sheet_Bartender_Attack_19: 1086284976
+      sheet_Bartender_Attack_14: -1043084714
+      sheet_Bartender_Attack_40: 1678163604
+      sheet_Bartender_Attack_11: 1207189544
+      sheet_Bartender_Attack_13: 1574547825
+      sheet_Bartender_Attack_26: -2064447699
+      sheet_Bartender_Attack_39: -498492196
+      sheet_Bartender_Attack_28: -172352861
+      sheet_Bartender_Attack_64: 507865134
+      sheet_Bartender_Attack_30: 333741423
+      sheet_Bartender_Attack_44: -1071445418
+      sheet_Bartender_Attack_38: 109493626
+      sheet_Bartender_Attack_49: 2042984041
+      sheet_Bartender_Attack_8: -393339857
+      sheet_Bartender_Attack_2: 1876187003
+      sheet_Bartender_Attack_34: -1171318720
+      sheet_Bartender_Attack_36: 1011232739
+      sheet_Bartender_Attack_52: 456244014
+      sheet_Bartender_Attack_1: -1786388496
+      sheet_Bartender_Attack_50: 1594812447
+      sheet_Bartender_Attack_70: -1119890166
+      sheet_Bartender_Attack_9: 1454312950
+      sheet_Bartender_Attack_41: -1779113641
+      sheet_Bartender_Attack_63: 238594375
+      sheet_Bartender_Attack_31: 407439736
+      sheet_Bartender_Attack_65: -488057872
+      sheet_Bartender_Attack_7: 1594461471
+      sheet_Bartender_Attack_32: -1329906690
+      sheet_Bartender_Attack_22: -1328098437
+      sheet_Bartender_Attack_59: 709688274
+      sheet_Bartender_Attack_71: -123958494
+      sheet_Bartender_Attack_15: 1520982770
+      sheet_Bartender_Attack_35: -1823180976
+      sheet_Bartender_Attack_0: -711936499
+      sheet_Bartender_Attack_3: 1937837431
+      sheet_Bartender_Attack_57: 949812655
+      sheet_Bartender_Attack_37: -1066271437
+      sheet_Bartender_Attack_68: -1751407972
+      sheet_Bartender_Attack_29: 1412331662
+      sheet_Bartender_Attack_18: -1393630323
+      sheet_Bartender_Attack_46: 1794901933
+      sheet_Bartender_Attack_53: -2088080106
+      sheet_Bartender_Attack_5: -1329427585
+      sheet_Bartender_Attack_43: 190706546
+      sheet_Bartender_Attack_4: -301565328
+      sheet_Bartender_Attack_27: -691522005
+      sheet_Bartender_Attack_56: -1644808493
+      sheet_Bartender_Attack_17: 1392444170
+      sheet_Bartender_Attack_33: 1151021992
+      sheet_Bartender_Attack_20: -723278155
+      sheet_Bartender_Attack_47: 735404995
+      sheet_Bartender_Attack_42: -50444020
+      sheet_Bartender_Attack_16: -990197310
+      sheet_Bartender_Attack_69: -1188819162
+      sheet_Bartender_Attack_6: 849229598
+      sheet_Bartender_Attack_58: 820741335
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

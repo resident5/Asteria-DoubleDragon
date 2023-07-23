@@ -1,1 +1,0 @@
-{"width":645,"height":113,"frames":[{"name":"bartender/dash1","width":215,"height":113,"originX":0,"originY":0,"centerX":135,"centerY":109},{"name":"bartender/dash2","width":215,"height":113,"originX":215,"originY":0,"centerX":135,"centerY":109},{"name":"bartender/dash3","width":215,"height":113,"originX":430,"originY":0,"centerX":135,"centerY":109}]}
