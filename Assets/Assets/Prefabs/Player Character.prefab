@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514512234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.046, y: -0.615, z: 0}
+  m_LocalPosition: {x: 0.0250001, y: 0.05159998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 1166322670}
   m_Layer: 6
   m_Name: Shadow
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,7 +84,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332900873913962801}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.04099989, y: -0.5976, z: 0.0012679932}
+  m_LocalPosition: {x: 0.03, y: 0.069, z: 0.0012679932}
   m_LocalScale: {x: 0.17254828, y: 0.41176906, z: 0.2541}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -130,7 +130,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -938525947
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: -1
   m_Sprite: {fileID: -9095717837082945937, guid: 23a5a1e8b69fcb44c8ec1471775a1c37, type: 3}
   m_Color: {r: 0.31091928, g: 0.30994126, b: 0.3301887, a: 1}
@@ -197,7 +197,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332900873947939816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.55, z: 0}
+  m_LocalPosition: {x: 0.0710001, y: 0.11659998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -244,7 +244,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -938525947
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 900454938, guid: 44da976dd69ac1147a533b2c662c21e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -365,7 +365,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1332900874062085615}
   - component: {fileID: 1332900874062085604}
-  - component: {fileID: 3867493539271840695}
   - component: {fileID: 1332900874062085611}
   - component: {fileID: 1332900874062085610}
   - component: {fileID: 3651371960207021781}
@@ -416,17 +415,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!210 &3867493539271840695
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1332900874062085614}
-  m_Enabled: 1
-  m_SortingLayerID: -938525947
-  m_SortingLayer: 3
-  m_SortingOrder: 0
 --- !u!114 &1332900874062085611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,9 +453,9 @@ MonoBehaviour:
   jump: 0
   running: 0
   animator: {fileID: 1332900873947939812}
-  shadowCollider: {fileID: 0}
+  shadowCollider: {fileID: 1166322670}
   boundaryCollider: {fileID: 0}
-  playerHeightOffset: 0.575
+  playerHeightOffset: 0.7
 --- !u!114 &1332900874062085610
 MonoBehaviour:
   m_ObjectHideFlags: 0

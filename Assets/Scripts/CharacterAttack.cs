@@ -40,11 +40,11 @@ public class CharacterAttack : MonoBehaviour
             foreach(var col in enemyColliders)
             {
                 //Enemies take damage
-                Dummy dummy = col.GetComponent<Dummy>();
-                if (dummy != null)
+                var enemy = col.GetComponent<Enemy>();
+                if (enemy != null)
                 {
-                    dummy.TakeDamage(damage);
-                    dummy.onEnemyHit?.Invoke();
+                    enemy.TakeDamage(damage);
+                    enemy.onEnemyHit?.Invoke();
                 }
                 Debug.Log("We hit " + col.transform.name);
             }

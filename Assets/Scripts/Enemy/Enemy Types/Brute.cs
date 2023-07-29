@@ -1,17 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Brute : Enemy
 {
-    // Start is called before the first frame update
-    void Start()
+    public float MyRandomRange => RandomMovementRange;
+    //public float strikingDistance => strik;
+    public Vector3 Offset => colliderOffset;
+    private void OnDrawGizmosSelected()
     {
-        
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position + Offset, MyRandomRange);
+        Gizmos.DrawLine(transform.position + Offset, player.transform.position);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
+
+    // Start is called before the first frame update
 }

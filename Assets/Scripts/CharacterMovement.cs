@@ -51,10 +51,24 @@ public class CharacterMovement : MonoBehaviour
     #endregion
 
     [Header("Boundary Collider")]
+    #region Collider
+    
     public Collider2D shadowCollider;
     public Collider2D boundaryCollider;
     public float playerHeightOffset = 0.575f;
 
+    #endregion
+
+    [Header("Stats")]
+
+    #region Stats
+
+    [SerializeField] private int currentHealth;
+    [SerializeField] private int maxHealth;
+    [SerializeField] private int attackDamage;
+    
+    #endregion
+    
     private void Awake()
     {
         if (Instance == null)
@@ -72,6 +86,7 @@ public class CharacterMovement : MonoBehaviour
     private void Start()
     {
         charDefaultRelPos = charRB.transform.localPosition;
+        currentHealth = maxHealth;
     }
     // Update is called once per frame
     void Update()
@@ -202,28 +217,30 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     private Vector2 CalculateBounds()
     {
         Bounds shadowBounds = shadowCollider.bounds;
         Bounds boundaryBounds = boundaryCollider.bounds;
-
-        //float minX = MathF.Abs(boundaryBounds.min.x);
-        //float minY = MathF.Abs(boundaryBounds.min.y);
-        //float maxX = MathF.Abs(boundaryBounds.max.x);
-        //float maxY = MathF.Abs(boundaryBounds.max.y);
-
-        //Vector2 clampedPosition = boundaryCollider.ClosestPoint(baseRB.position);
+        
         Vector2 clampedPosition = new Vector2(
             Mathf.Clamp(transform.position.x, boundaryBounds.min.x + shadowBounds.extents.x, MathF.Abs(boundaryBounds.max.x) - shadowBounds.extents.x),
-            Mathf.Clamp(transform.position.y, boundaryBounds.min.y + (shadowBounds.extents.y + playerHeightOffset), boundaryBounds.max.y - shadowBounds.extents.y)
+            Mathf.Clamp(transform.position.y, boundaryBounds.min.y + (shadowBounds.extents.y), boundaryBounds.max.y - shadowBounds.extents.y)
         );
-
-        Debug.Log("Boundary Minimum Bounds: " + boundaryBounds.min.y + " Boundary Maximum Bounds: " + boundaryBounds.max.y);
-        Debug.Log("Shadow Extends " + shadowBounds.extents.y);
-
+        
         return clampedPosition;
     }
 
+    public void TakeDamage(int damageTaken)
+    {
+        currentHealth -= damageTaken;
+        animator.SetBool("hit", true);
+        if (currentHealth <= damageTaken)
+        {
+            Debug.Log("Player Died");
+            //Death;
+        }
+    }
 
     private void OnDrawGizmos()
     {
