@@ -6,6 +6,7 @@ using UnityEngine;
 public class Brute : Enemy
 {
     public float MyRandomRange => RandomMovementRange;
+    public int MyDamage => attackDamage;
     //public float strikingDistance => strik;
     public Vector3 Offset => colliderOffset;
     private void OnDrawGizmosSelected()

@@ -5,50 +5,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14892825-2fdb-4e94-b0f9-d164713905cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/ITriggerCheckable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/ITriggerCheckable.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/ConcreteStates/EnemyHitState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/ConcreteStates/EnemyHitState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/ConcreteStates/EnemyPatrolState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/TriggerChecks/AnimationEventReceiver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/TriggerChecks/AnimationEventReceiver.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/TriggerChecks/EnemyStrikingDistanceCheck.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/TriggerChecks/EnemyStrikingDistanceCheck.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/ConcreteStates/EnemyDeathState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/ConcreteStates/EnemyDeathState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/ConcreteStates/EnemyHornyState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/ConcreteStates/EnemyHornyState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Stats.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Stats.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteria-DoubleDragon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteria-DoubleDragon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Bartender_Dash.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Bartender_Dash.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Bartender_Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Bartender_Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Bartender_Jump.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Bartender_Jump.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Bartender_Landing.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Bartender_Landing.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Bartender_Run.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Bartender_Run.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Bartender_Walk.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Bartender_Walk.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Enemy.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Enemy.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Player.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Player.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Player_Punch.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Player_Punch.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Brute/Brute_Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations/Brute/Brute_Attack.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Brute/Brute_Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations/Brute/Brute_Idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Brute/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations/Brute/Enemy.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Player/Bartender_Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Player/Bartender_Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Player/Bartender_Jump.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Player/Bartender_Jump.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Player/Bartender_Run.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Player/Bartender_Run.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Player/Bartender_Walk.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Player/Bartender_Walk.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Player/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations/Player/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Player/Player_Hit.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations/Player/Player_Hit.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Animations/Player/Player_Punch.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Animations/Player/Player_Punch.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mats.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mats/2D Pipeline Asset.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mats/2D Pipeline Asset.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mats/2D Pipeline Asset_Renderer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mats/2D Pipeline Asset_Renderer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mats/Dissolve.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mats/Dissolve.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mats/Dissolve.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mats/Dissolve.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mats/NewUnlitShader.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mats/NewUnlitShader.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Prefabs/Brute.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Prefabs/Brute.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Prefabs/Player Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Prefabs/Player Character.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharacterAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterAttack.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharacterAttack.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharacterMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharacterMovement.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Base/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Base/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy Types/Brute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy Types/Brute.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IDamagable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IDamagable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/ConcreteStates/EnemyAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/ConcreteStates/EnemyAttackState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/ConcreteStates/EnemyChaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/ConcreteStates/EnemyChaseState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/ConcreteStates/EnemyIdleState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/ConcreteStates/EnemyIdleState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/ConcreteStates/EnemyPatrolState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/EnemyState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/EnemyState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextureImporter.preset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextureImporter.preset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/ConcreteStates/EnemyHitState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/ConcreteStates/EnemyHitState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/EnemyStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/EnemyStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/TriggerChecks/AnimationEventReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/TriggerChecks/AnimationEventReceiver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/TriggerChecks/EnemyStrikingDistanceCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/TriggerChecks/EnemyStrikingDistanceCheck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VisibilityCheck.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VisibilityCheck.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +67,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/VisibilityCheck.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EnemyHealthBarHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.pixel-perfect@5.0.1/Samples~/Scenes and Extras/Scenes/RoboHero/Scripts/Hero.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Samples~/Cinemachine Example Scenes/Shared/Models/UnityCharacter/Scripts/CharacterMovement.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -71,28 +80,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Damien Terre\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Damien Terre\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\Damien Terre\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Damien Terre\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Damien Terre\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Damien Terre\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\Engines\Unity\2021.3.1f1\Editor\Unity.exe" />
@@ -145,6 +154,16 @@
       <workItem from="1690404497614" duration="11023000" />
       <workItem from="1690474206464" duration="22446000" />
       <workItem from="1690641929583" duration="4712000" />
+      <workItem from="1690700443595" duration="2050000" />
+      <workItem from="1690732497859" duration="5467000" />
+      <workItem from="1691335663517" duration="4065000" />
+      <workItem from="1691527783946" duration="2536000" />
+      <workItem from="1691609359335" duration="1640000" />
+      <workItem from="1691787190522" duration="3919000" />
+      <workItem from="1691914229978" duration="5568000" />
+      <workItem from="1691970069018" duration="3581000" />
+      <workItem from="1692026194509" duration="3989000" />
+      <workItem from="1692126493729" duration="9300000" />
     </task>
     <servers />
   </component>
@@ -162,13 +181,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Enemy/State Machine/EnemyStateMachine.cs</url>
-          <line>10</line>
+          <line>11</line>
           <properties documentPath="D:\Projects\Github Repos\Asteria-DoubleDragon\Assets\Scripts\Enemy\State Machine\EnemyStateMachine.cs" initialLine="10" containingFunctionPresentation="Method 'Initialize'">
             <startOffsets>
-              <option value="235" />
+              <option value="290" />
             </startOffsets>
             <endOffsets>
-              <option value="269" />
+              <option value="324" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />

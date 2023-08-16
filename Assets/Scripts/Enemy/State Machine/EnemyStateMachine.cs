@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyStateMachine
 {
     public EnemyState CurrentEnemyState { get; set; }
+    public EnemyState PreviousEnemyState { get; set; }
 
     public void Initialize(EnemyState startingState)
     {
@@ -14,6 +15,9 @@ public class EnemyStateMachine
 
     public void ChangeState(EnemyState newState)
     {
+        if(newState != CurrentEnemyState)
+            PreviousEnemyState = CurrentEnemyState;
+        
         CurrentEnemyState.ExitState();
         CurrentEnemyState = newState;
         CurrentEnemyState.EnterState();

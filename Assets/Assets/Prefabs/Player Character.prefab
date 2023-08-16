@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 1332900873947939812}
   - component: {fileID: 1332900873947939818}
   - component: {fileID: 1332900873947939814}
+  - component: {fileID: 126281699}
   m_Layer: 8
   m_Name: PlayerGraphix
   m_TagString: Untagged
@@ -246,12 +247,12 @@ SpriteRenderer:
   m_SortingLayerID: -938525947
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 900454938, guid: 44da976dd69ac1147a533b2c662c21e3, type: 3}
+  m_Sprite: {fileID: 1102585901, guid: fea31ffeebe678143853b15872498d51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.5, y: 1.6}
+  m_Size: {x: 1.86, y: 1.89}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -293,9 +294,9 @@ BoxCollider2D:
   m_Offset: {x: -0.052603245, y: 0.52}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.12}
-    oldSize: {x: 1.5, y: 1.6}
-    newSize: {x: 1.5, y: 1.6}
+    pivot: {x: 0.5, y: 0.03}
+    oldSize: {x: 1.2202228, y: 1.2488889}
+    newSize: {x: 1.86, y: 1.89}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -324,6 +325,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &126281699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332900873947939816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77831262940f4220a562acefd07ac056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1332900874008649214
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54771a319d2c92c438a8bde38e4a99f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationEventReceiver: {fileID: 0}
   speedX: 2
   speedY: 2
   runX: 4
@@ -450,12 +464,20 @@ MonoBehaviour:
     m_Bits: 64
   jumpMultiplier: 2
   fallingMultiplier: 2.5
+  wasAirborne: 0
   jump: 0
   running: 0
   animator: {fileID: 1332900873947939812}
   shadowCollider: {fileID: 1166322670}
   boundaryCollider: {fileID: 0}
   playerHeightOffset: 0.7
+  currentHealth: 0
+  maxHealth: 500000
+  attackDamage: 0
+  playerHealthBar: {fileID: 0}
+  enemyHealthBar: {fileID: 0}
+  targetEnemy: {fileID: 0}
+  playerState: 0
 --- !u!114 &1332900874062085610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,9 +490,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b5b32eac5d0ad4e813ed6117cdd859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterMovement: {fileID: 1332900874062085611}
+  player: {fileID: 1332900874062085611}
   characterAttack: {fileID: 0}
-  animator: {fileID: 1332900873947939812}
   running: 0
   doubleTapTimeDelay: 0.8
   timeSinceLastTap: 0
@@ -509,6 +530,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   enemyColliders: []
+  player: {fileID: 0}
   damage: 20
 --- !u!114 &1332900874062085609
 MonoBehaviour:

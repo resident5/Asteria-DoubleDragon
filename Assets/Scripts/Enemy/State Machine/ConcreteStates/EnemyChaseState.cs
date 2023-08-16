@@ -31,29 +31,36 @@ public class EnemyChaseState : EnemyState
     public override void ExitState()
     {
         base.ExitState();
+        enemy.anim.SetBool("move", false);
     }
 
     public override void FrameUpdate()
     {
         base.FrameUpdate();
-        var enemyPos = (Vector2)enemy.transform.position;
-        _direction = (_targetPos - enemyPos).normalized;
-        enemy.MoveEnemy(_direction * enemy.MoveSpeed);
-        enemy.anim.SetBool("move", true);
-
         
-        //Debug.Log($"Target pos: {_targetPos}\n Enemy Pos: {enemyPos}\n Player Pos: {_playerTransform.transform.position}");
-
-        if ((enemyPos - _targetPos).sqrMagnitude < 0.01f)
-        {
-            _targetPos = GetRandomPointAroundPlayer();
-        }
-
-        float dist = Vector2.Distance(_playerTransform.position, enemy.transform.position);
         if (enemy.IsWithinStrikingDistance)
         {
             enemy.StateMachine.ChangeState(enemy.AttackState);
         }
+        else
+        {
+            var enemyPos = (Vector2)enemy.transform.position;
+            _direction = (_targetPos - enemyPos).normalized;
+            enemy.MoveEnemy(_direction * enemy.MoveSpeed);
+            enemy.anim.SetBool("move", true);
+            
+            if ((enemyPos - _targetPos).sqrMagnitude < 0.01f)
+            {
+                _targetPos = GetRandomPointAroundPlayer();
+            }
+
+        } 
+        
+        //Debug.Log($"Target pos: {_targetPos}\n Enemy Pos: {enemyPos}\n Player Pos: {_playerTransform.transform.position}");
+
+
+        //float dist = Vector2.Distance(_playerTransform.position, enemy.transform.position);
+        
     }
 
     public override void PhysicsUpdate()

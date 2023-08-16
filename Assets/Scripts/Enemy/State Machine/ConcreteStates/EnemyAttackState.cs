@@ -9,15 +9,13 @@ public class EnemyAttackState : EnemyState
     private Vector3 targetDirection;
     private float xOffset = 1.5f;
 
-    private float timeSinceLastAttack;
-    private float attackDelay;
+    private float attackTimer;
     private bool canAttack = true;
 
 
     public EnemyAttackState(Enemy e, EnemyStateMachine eState) : base(e, eState)
     {
         _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        attackDelay = e.attackDelay;
     }
 
     public override void EnterState()
@@ -33,23 +31,35 @@ public class EnemyAttackState : EnemyState
     public override void FrameUpdate()
     {
         enemy.MoveEnemy(Vector2.zero);
+
         if (!enemy.IsWithinStrikingDistance)
         {
             enemy.StateMachine.ChangeState(enemy.ChaseState);
         }
         else
         {
-            if (canAttack)
+            attackTimer += Time.deltaTime;
+            if (attackTimer >= enemy.attackDelay)
             {
-                enemy.anim.SetTrigger("attack");
-                enemy.anim.SetBool("move",false);
-                timeSinceLastAttack = Time.time;
-                canAttack = false;
+                if (!enemy.isHorny)
+                {
+                    enemy.anim.SetTrigger("attack");
+                }
+                else
+                {
+                    enemy.anim.SetTrigger("grab");
+                    enemy.StateMachine.ChangeState(enemy.HornyState);
+                }
+                attackTimer = 0;
             }
-            else if (!canAttack && Time.time - timeSinceLastAttack >= attackDelay)
-            {
-                canAttack = true;
-            }
+
+            // if (!canAttack && Time.time - timeSinceLastAttack >= enemy.attackDelay)
+            // {
+            //     canAttack = true;
+            // }
+            // else if (canAttack)
+            // {
+            // }
         }
     }
 

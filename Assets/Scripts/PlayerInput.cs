@@ -3,14 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class PlayerInput : MonoBehaviour
 {
-    public CharacterMovement characterMovement;
+    [FormerlySerializedAs("characterMovement")]
+    public CharacterMovement player;
+
     public CharacterAttack characterAttack;
     public Player1Inputs input = null;
     private Vector2 moveVector = Vector2.zero;
-    public Animator animator;
 
     public bool running = false;
 
@@ -22,7 +24,7 @@ public class PlayerInput : MonoBehaviour
 
     private void Awake()
     {
-        characterMovement = GetComponent<CharacterMovement>();
+        player = GetComponent<CharacterMovement>();
         characterAttack = GetComponent<CharacterAttack>();
         input = new Player1Inputs();
     }
@@ -40,7 +42,6 @@ public class PlayerInput : MonoBehaviour
         //input.Player.DoubleTap.canceled += OnDoubleTapCancelled;
         input.Player.HoldTap.performed += OnHoldPerformed;
         input.Player.HoldTap.canceled += OnHoldCancelled;
-
     }
 
     private void OnDisable()
@@ -56,28 +57,25 @@ public class PlayerInput : MonoBehaviour
         //input.Player.DoubleTap.canceled -= OnDoubleTapCancelled;
         input.Player.HoldTap.performed -= OnHoldPerformed;
         input.Player.HoldTap.canceled -= OnHoldCancelled;
-
-
     }
 
     private void FixedUpdate()
     {
-        characterMovement.Move(moveVector.x, moveVector.y, running);
+        player.Move(moveVector.x, moveVector.y, running);
     }
 
     private void OnJumpPerformed(InputAction.CallbackContext value)
     {
         if (input != null)
         {
-            characterMovement.jump = true;
-            animator.SetBool("jump",true);
+            player.jump = true;
+            player.animator.SetBool("isJumping", true);
         }
     }
 
     private void OnJumpCancelled(InputAction.CallbackContext value)
     {
-        characterMovement.jump = false;
-        animator.SetBool("jump", false);
+        //player.jump = false;
     }
 
     void OnDoubleTapPerformed(InputAction.CallbackContext context)
@@ -91,8 +89,6 @@ public class PlayerInput : MonoBehaviour
     void OnDoubleTapCancelled(InputAction.CallbackContext context)
     {
         Debug.Log("Untapped");
-
-
     }
 
     void OnHoldPerformed(InputAction.CallbackContext context)
@@ -104,8 +100,8 @@ public class PlayerInput : MonoBehaviour
             {
                 doubleTapped = true;
                 running = true;
-                animator.SetBool("run", true);
-                animator.SetBool("move", false);
+                //characterMovement.animator.SetBool("run", true);
+                //characterMovement.animator.SetBool("move", false);
             }
 
             timeSinceLastTap = currentTime;
@@ -123,8 +119,7 @@ public class PlayerInput : MonoBehaviour
     {
         running = false;
         doubleTapped = false;
-        animator.SetBool("run", false);
-
+        player.animator.SetBool("run", false);
     }
 
     public void OnMovementPerformed(InputAction.CallbackContext value)
@@ -132,19 +127,20 @@ public class PlayerInput : MonoBehaviour
         if (input != null)
         {
             moveVector = value.ReadValue<Vector2>();
-            animator.SetBool("move", true);
         }
     }
 
     void OnMovementCancelled(InputAction.CallbackContext value)
     {
         moveVector = Vector2.zero;
-        animator.SetBool("move", false);
+        player.animator.SetBool("move", false);
+        player.animator.SetFloat("speedX", 0);
+        player.animator.SetFloat("speedY", 0);
     }
 
     void OnPAttackPerformed(InputAction.CallbackContext context)
     {
-        if(context.performed)
+        if (context.performed)
         {
             characterAttack.Attack();
         }
@@ -152,8 +148,5 @@ public class PlayerInput : MonoBehaviour
 
     void OnPAttackCancelled(InputAction.CallbackContext value)
     {
-
     }
-
-
 }

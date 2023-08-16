@@ -4,22 +4,17 @@ using UnityEngine.Events;
 
 public class AnimationEventReceiver : MonoBehaviour
 {
-    public Enemy enemy;
-    public event Action<AnimationEvent> hitAnimationStart; 
-    public event Action<AnimationEvent> hitAnimationEnded; 
-    private void Start()
-    {
-        enemy = GetComponentInParent<Enemy>();
-    }
+    public event Action<AnimationEvent> AnimationStart; 
+    public event Action<AnimationEvent> AnimationEnded;
 
     private void OnAnimationStart(AnimationEvent animationEvent)
     {
-        hitAnimationStart?.Invoke(animationEvent);
+        AnimationStart?.Invoke(animationEvent);
     }
     
     private void OnAnimationEnded(AnimationEvent animationEvent)
     {
-        hitAnimationEnded?.Invoke(animationEvent);
+        AnimationEnded?.Invoke(animationEvent);
     }
 
 

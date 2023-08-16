@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyHitState : EnemyState
 {
-
+    public float currentDelay = 0;
     public EnemyHitState(Enemy e, EnemyStateMachine eState) : base(e, eState)
     {
     }
@@ -13,6 +13,16 @@ public class EnemyHitState : EnemyState
     public override void EnterState()
     {
         base.EnterState();
+        currentDelay = 0;
+        
+        enemy.anim.SetTrigger("hit");
+        enemy.enemyHealthBarHandler.targetEnemy = enemy;
+        enemy.enemyHealthBarHandler.gameObject.SetActive(true);
+        if (enemy.enemyHealthBarHandler.targetEnemy == enemy)
+        {
+            enemy.enemyHealthBarHandler.slider.maxValue = enemy.MaxHealth;
+            //enemy.enemyHealthBarHandler.ModifySlier(-damageAmount);
+        }
     }
 
     public override void ExitState()
@@ -22,7 +32,11 @@ public class EnemyHitState : EnemyState
 
     public override void FrameUpdate()
     {
-        
+        currentDelay += Time.deltaTime;
+        if (currentDelay >= enemy.recoveryDelay)
+        {
+            enemy.StateMachine.ChangeState(enemy.StateMachine.PreviousEnemyState);
+        }
     }
 
     public override void PhysicsUpdate()

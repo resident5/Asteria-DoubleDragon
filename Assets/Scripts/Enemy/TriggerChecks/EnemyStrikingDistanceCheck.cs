@@ -17,7 +17,6 @@ public class EnemyStrikingDistanceCheck : MonoBehaviour
         if (other.gameObject == playerTarget)
         {
             enemy.SetStrikingDistance(true);
-            Debug.Log($"DETECT PLAYER, {other.gameObject.name}");
         }
     }
 
