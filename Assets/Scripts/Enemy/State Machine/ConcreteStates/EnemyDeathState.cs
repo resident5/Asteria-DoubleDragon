@@ -13,7 +13,9 @@ public class EnemyDeathState : EnemyState
     public override void EnterState()
     {
         base.EnterState();
+        enemy.isDead = true;
         enemy.RB.velocity = Vector2.zero;
+        GameController.Instance.EnemyDeathCounterIncrease();
         enemy.anim.SetBool("death", true);
     }
 

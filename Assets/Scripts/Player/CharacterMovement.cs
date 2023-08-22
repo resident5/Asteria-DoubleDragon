@@ -300,5 +300,16 @@ public class CharacterMovement : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawRay(groundDetector.transform.position, Vector2.down * groundDistance);
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(transform.position, new Vector3(boundaryCollider.bounds.min.x + shadowCollider.bounds.extents.x, transform.position.y));
+        
+        Gizmos.DrawLine(transform.position, new Vector3(boundaryCollider.bounds.max.x - shadowCollider.bounds.extents.x, transform.position.y));
+
+        Gizmos.DrawLine(transform.position, new Vector3(transform.position.x, boundaryCollider.bounds.min.y + (shadowCollider.bounds.extents.y)));
+
+        Gizmos.DrawLine(transform.position, new Vector3(transform.position.x, boundaryCollider.bounds.max.y - shadowCollider.bounds.extents.y));
+
+
+
     }
 }

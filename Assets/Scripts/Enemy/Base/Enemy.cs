@@ -12,7 +12,6 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
     public bool FacingRight { get; set; } = true;
 
     public Animator anim;
-    public bool isDead = false;
     public float recoveryTime;
     public GameObject player;
     public delegate void AttackedByPlayer();
@@ -48,16 +47,16 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
 
     #endregion
 
-    #region DeathChecks
+    #region Stats
 
     [field: SerializeField] public float MaxHealth { get; set; }
     [field: SerializeField] public float CurrentHealth { get; set; }
     [field: SerializeField] public float CurrentLust{ get; set; }
     [field: SerializeField] public float MaxLust { get; set; }
     public float lustRate;
-
-
+    
     public bool isHorny;
+    public bool isDead;
 
     #endregion
 
@@ -82,6 +81,8 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
         CurrentHealth = MaxHealth;
         CurrentLust = 0;
         StateMachine.Initialize(PatrolState);
+        
+        boundaryCollider = GameObject.FindWithTag("Boundary").GetComponent<PolygonCollider2D>();
 
         RB = GetComponentInChildren<Rigidbody2D>();
         onEnemyHit += GameController.Instance.ComboCount;
@@ -111,7 +112,7 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
                 visCheck.gameObject.GetComponent<SpriteRenderer>().material.color = Color.magenta;
             }
         }
-        Debug.Log($"Statemachine = {StateMachine.CurrentEnemyState}");
+        // Debug.Log($"Statemachine = {StateMachine.CurrentEnemyState}");
     }
 
     private void FixedUpdate()
@@ -149,42 +150,22 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
 
     #region Health/Death State Checks
 
-    // public void CheckDead()
-    // {
-    //     if (!isDead)
-    //     {
-    //         if (CurrentHealth > 0)
-    //         {
-    //             isDead = true;
-    //         }
-    //
-    //         if (recoveryTime > 0f)
-    //         {
-    //             recoveryTime -= Time.deltaTime;
-    //         }
-    //         else
-    //         {
-    //             recoveryTime = 0;
-    //             anim.SetBool("hit", false);
-    //         }
-    //     }
-    // }
-
     public void TakeDamage(float damageAmount)
     {
-        
-        CurrentHealth -= damageAmount;
-
-        StateMachine.ChangeState(HitState);
-
-        enemyHealthBarHandler.slider.value = CurrentHealth;
-        
-        //anim.SetBool("hit", true);
-        recoveryTime = 0.5f;
-
-        if (CurrentHealth <= 0f)
+        if (!isDead)
         {
-            Die();
+            CurrentHealth -= damageAmount;
+            StateMachine.ChangeState(HitState);
+
+            enemyHealthBarHandler.slider.value = CurrentHealth;
+
+            //anim.SetBool("hit", true);
+            recoveryTime = 0.5f;
+
+            if (CurrentHealth <= 0f)
+            {
+                Die();
+            }
         }
     }
 
@@ -194,6 +175,8 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
         {
             enemyHealthBarHandler.gameObject.SetActive(false);
         }
+        //Check if in ambushMode
+        //Reduce enemyWave
         StateMachine.ChangeState(DeathState);
     }
 

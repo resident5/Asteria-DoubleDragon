@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4916401881886448267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.028, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -157,8 +157,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4916401882009512174}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.099, y: -0.4974, z: 0}
-  m_LocalScale: {x: 0.19556803, y: 0.41561016, z: 1}
+  m_LocalPosition: {x: 0.099, y: 0.006, z: 0}
+  m_LocalScale: {x: 0.19556803, y: 0.5056729, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4916401882960380553}
@@ -287,7 +287,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08335924, y: -0.46060005}
+  m_Offset: {x: 0.08335924, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -320,15 +320,15 @@ MonoBehaviour:
   boundaryCollider: {fileID: 0}
   colliderOffset: {x: 0, y: 0, z: 0}
   visCheck: {fileID: 0}
-  attackDelay: 0.1
-  recoveryDelay: 0.2
+  attackDelay: 0.8
+  recoveryDelay: 0.3
   RandomMovementRange: 1
   MoveSpeed: 1
   <MaxHealth>k__BackingField: 400
   <CurrentHealth>k__BackingField: 0
   <CurrentLust>k__BackingField: 0
   <MaxLust>k__BackingField: 100
-  lustRate: 0
+  lustRate: 20
   isHorny: 0
   enemyHealthBarHandler: {fileID: 0}
   animationEventReceiver: {fileID: 0}
@@ -358,7 +358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4916401883497560249}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.49, z: 0}
+  m_LocalPosition: {x: 0, y: -0.072, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

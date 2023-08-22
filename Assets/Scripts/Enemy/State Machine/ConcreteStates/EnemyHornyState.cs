@@ -29,23 +29,24 @@ public class EnemyHornyState : EnemyState
     public override void FrameUpdate()
     {
         base.FrameUpdate();
-        Debug.Log($"Fuckmeter = {fuckMeter}");
+        //Debug.Log($"Fuckmeter = {fuckMeter}");
         fuckMeter += fuckRate * Time.deltaTime;
         if (fuckMeter < 40f)
         {
             fuckRate = 7f;
-            Debug.Log("Fuck normal");
+            enemy.anim.speed = 1f;
+            //Debug.Log("Fuck normal");
         }
         else if(fuckMeter < 70f)
         {
             fuckRate = 14f;
-            enemy.anim.speed = 1.5f;
-            Debug.Log("Fuck Faster");
+            enemy.anim.speed = 3f;
+            // Debug.Log("Fuck Faster");
         }
         else if(fuckMeter <= 100f)
         {
             fuckMeter = 0;
-            Debug.Log("CUMMMING!!!");
+            // Debug.Log("CUMMMING!!!");
         }
         
 

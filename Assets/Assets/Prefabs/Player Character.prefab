@@ -472,10 +472,9 @@ MonoBehaviour:
   boundaryCollider: {fileID: 0}
   playerHeightOffset: 0.7
   currentHealth: 0
-  maxHealth: 500000
+  maxHealth: 300
   attackDamage: 0
   playerHealthBar: {fileID: 0}
-  enemyHealthBar: {fileID: 0}
   targetEnemy: {fileID: 0}
   playerState: 0
 --- !u!114 &1332900874062085610
