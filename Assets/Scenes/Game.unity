@@ -879,7 +879,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.888167, y: -0.14998996, z: -10.001268}
+  m_LocalPosition: {x: -5.890047, y: -0.14998996, z: -10.001268}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3251,10 +3251,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1332900873947939813, guid: cbf5eefad28d912439e7728bb1e99ba9, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1102585901, guid: fea31ffeebe678143853b15872498d51, type: 3}
     - target: {fileID: 1332900874062085611, guid: cbf5eefad28d912439e7728bb1e99ba9, type: 3}
       propertyPath: boundaryCollider
       value: 

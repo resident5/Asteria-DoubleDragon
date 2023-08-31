@@ -60,6 +60,12 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
 
     #endregion
 
+    public Transform worldCanvas;
+    public SexMeter sexMeter;
+    public float fuckMeter;
+    public float maxFuckMeter = 100;
+    public float fuckRate = 2f;
+
     public EnemyHealthBarHandler enemyHealthBarHandler;
     
     public AnimationEventReceiver animationEventReceiver;
@@ -81,14 +87,15 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
         CurrentHealth = MaxHealth;
         CurrentLust = 0;
         StateMachine.Initialize(PatrolState);
-        
-        boundaryCollider = GameObject.FindWithTag("Boundary").GetComponent<PolygonCollider2D>();
 
+
+        boundaryCollider = GameObject.FindWithTag("Boundary").GetComponent<PolygonCollider2D>();
         RB = GetComponentInChildren<Rigidbody2D>();
         onEnemyHit += GameController.Instance.ComboCount;
         visCheck = GetComponentInChildren<VisibilityCheck>();
         animationEventReceiver = GetComponentInChildren<AnimationEventReceiver>();
         animationEventReceiver.AnimationStart += HandlePlayer;
+        animationEventReceiver.AnimationEnded += HandleSexPlayer;
         player = GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject;
         enemyHealthBarHandler = UIController.Instance.enemyUIHandlder;
 
@@ -132,10 +139,12 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
     {
         if (velocity.x < 0 && FacingRight)
         {
+            sexMeter.sexSlider.direction = Slider.Direction.RightToLeft;
             Turn();
         }
         else if (velocity.x > 0 && !FacingRight)
         {
+            sexMeter.sexSlider.direction = Slider.Direction.LeftToRight;
             Turn();
         }
     }
@@ -210,10 +219,18 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
             }
             else
             {
+                StateMachine.ChangeState(HornyState);
                 transform.position = playerScript.transform.position;
+                playerScript.targetEnemy = this;
                 playerScript.GetGrabbed();
+                sexMeter.gameObject.transform.SetParent(worldCanvas);
             }
         }
+    }
+
+    void HandleSexPlayer(AnimationEvent animationEvent)
+    {
+        fuckMeter += fuckRate;
     }
 
     public bool SetStrikingDistance(bool isWithinStrikingDistance)

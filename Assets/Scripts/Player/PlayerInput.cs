@@ -42,6 +42,10 @@ public class PlayerInput : MonoBehaviour
         //input.Player.DoubleTap.canceled += OnDoubleTapCancelled;
         input.Player.HoldTap.performed += OnHoldPerformed;
         input.Player.HoldTap.canceled += OnHoldCancelled;
+
+        input.Player.Struggle.performed += OnStrugglePerformed;
+        input.Player.Struggle.canceled += OnStruggleCancelled;
+
     }
 
     private void OnDisable()
@@ -57,6 +61,9 @@ public class PlayerInput : MonoBehaviour
         //input.Player.DoubleTap.canceled -= OnDoubleTapCancelled;
         input.Player.HoldTap.performed -= OnHoldPerformed;
         input.Player.HoldTap.canceled -= OnHoldCancelled;
+        input.Player.Struggle.performed -= OnStrugglePerformed;
+        input.Player.Struggle.canceled -= OnStruggleCancelled;
+
     }
 
     private void FixedUpdate()
@@ -148,5 +155,25 @@ public class PlayerInput : MonoBehaviour
 
     void OnPAttackCancelled(InputAction.CallbackContext value)
     {
+    }
+
+    void OnStrugglePerformed(InputAction.CallbackContext value)
+    {
+        Debug.Log("Why do you struggl");
+        if (player.playerState == CharacterMovement.PlayerState.GRABBED)
+        {
+            player.targetEnemy.fuckMeter -= player.struggleRate;
+
+            if (player.targetEnemy.fuckMeter <= 0)
+            {
+                player.ReleaseGrabbed();
+                player.targetEnemy.StateMachine.ChangeState(player.targetEnemy.PatrolState);
+            }
+        }
+    }
+
+    void OnStruggleCancelled(InputAction.CallbackContext value)
+    {
+
     }
 }

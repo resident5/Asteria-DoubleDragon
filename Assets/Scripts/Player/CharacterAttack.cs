@@ -30,7 +30,7 @@ public class CharacterAttack : MonoBehaviour
 
     public void Attack()
     {
-        if (player.playerState != CharacterMovement.PlayerState.DAMAGED)
+        if (player.playerState != CharacterMovement.PlayerState.DAMAGED && player.playerState != CharacterMovement.PlayerState.AIRBORNE)
         {
             player.playerState = CharacterMovement.PlayerState.ATTACKING;
             //Play an attack animation
@@ -49,6 +49,8 @@ public class CharacterAttack : MonoBehaviour
                     if (enemy != null)
                     {
                         enemy.TakeDamage(damage);
+                        AudioController.Instance.sfxAudioSource.clip = player.attackAudioClips[Random.Range(0, 2)];
+                        AudioController.Instance.sfxAudioSource.Play();
                         enemy.onEnemyHit?.Invoke();
                     }
                 }

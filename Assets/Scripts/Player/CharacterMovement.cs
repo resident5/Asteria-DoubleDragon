@@ -87,12 +87,15 @@ public class CharacterMovement : MonoBehaviour
 
     [SerializeField] private int maxHealth;
     [SerializeField] private int attackDamage;
-
     [SerializeField] private Slider playerHealthBar;
     
     public Enemy targetEnemy;
 
+    public float struggleRate = 1.5f;
     #endregion
+
+    [Header("Audio")]
+    public List<AudioClip> attackAudioClips;
 
     public enum PlayerState
     {
@@ -197,6 +200,7 @@ public class CharacterMovement : MonoBehaviour
             if (jump && jumpCurrent < jumpMax)
             {
                 //????
+                playerState = PlayerState.AIRBORNE;
                 charRB.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
                 charRB.gravityScale = jumpMultiplier;
                 jump = false;
@@ -248,6 +252,7 @@ public class CharacterMovement : MonoBehaviour
             {
                 wasAirborne = false;
                 animator.SetBool("isJumping", false);
+                playerState = PlayerState.NEUTRAL;
             }
         }
     }
@@ -260,7 +265,7 @@ public class CharacterMovement : MonoBehaviour
 
         Vector2 clampedPosition = new Vector2(
             Mathf.Clamp(transform.position.x, boundaryBounds.min.x + shadowBounds.extents.x,
-                MathF.Abs(boundaryBounds.max.x) - shadowBounds.extents.x),
+                boundaryBounds.max.x - shadowBounds.extents.x),
             Mathf.Clamp(transform.position.y, boundaryBounds.min.y + (shadowBounds.extents.y),
                 boundaryBounds.max.y - shadowBounds.extents.y)
         );
@@ -286,8 +291,21 @@ public class CharacterMovement : MonoBehaviour
     public void GetGrabbed()
     {
         playerState = PlayerState.GRABBED;
-        gameObject.SetActive(false);
+        charRB.gameObject.SetActive(false);
+        shadowCollider.gameObject.SetActive(false);
         // canMove = false;
+    }
+
+    public void ReleaseGrabbed()
+    {
+        playerState = PlayerState.NEUTRAL;
+        charRB.gameObject.SetActive(true);
+        shadowCollider.gameObject.SetActive(true);
+        // canMove = false;
+    }
+
+    public void OnGrabStruggle()
+    {
         
     }
 

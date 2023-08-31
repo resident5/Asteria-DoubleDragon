@@ -73,6 +73,15 @@ namespace UnityEngine.InputSystem
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Struggle"",
+                    ""type"": ""Button"",
+                    ""id"": ""788c89a9-7b27-430d-a513-49b241c37bd4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -238,6 +247,28 @@ namespace UnityEngine.InputSystem
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""P Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f56ff49f-9a75-4586-800c-c174b5791fa4"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": ""Tap(duration=0.4)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Struggle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1caca500-4a5e-4ad4-800d-95768e539677"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": ""Tap(duration=0.4)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Struggle"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -830,6 +861,7 @@ namespace UnityEngine.InputSystem
             m_Player_DoubleTap = m_Player.FindAction("DoubleTap", throwIfNotFound: true);
             m_Player_HoldTap = m_Player.FindAction("HoldTap", throwIfNotFound: true);
             m_Player_PAttack = m_Player.FindAction("P Attack", throwIfNotFound: true);
+            m_Player_Struggle = m_Player.FindAction("Struggle", throwIfNotFound: true);
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -906,6 +938,7 @@ namespace UnityEngine.InputSystem
         private readonly InputAction m_Player_DoubleTap;
         private readonly InputAction m_Player_HoldTap;
         private readonly InputAction m_Player_PAttack;
+        private readonly InputAction m_Player_Struggle;
         public struct PlayerActions
         {
             private @Player1Inputs m_Wrapper;
@@ -915,6 +948,7 @@ namespace UnityEngine.InputSystem
             public InputAction @DoubleTap => m_Wrapper.m_Player_DoubleTap;
             public InputAction @HoldTap => m_Wrapper.m_Player_HoldTap;
             public InputAction @PAttack => m_Wrapper.m_Player_PAttack;
+            public InputAction @Struggle => m_Wrapper.m_Player_Struggle;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -939,6 +973,9 @@ namespace UnityEngine.InputSystem
                     @PAttack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPAttack;
                     @PAttack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPAttack;
                     @PAttack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPAttack;
+                    @Struggle.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStruggle;
+                    @Struggle.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStruggle;
+                    @Struggle.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStruggle;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -958,6 +995,9 @@ namespace UnityEngine.InputSystem
                     @PAttack.started += instance.OnPAttack;
                     @PAttack.performed += instance.OnPAttack;
                     @PAttack.canceled += instance.OnPAttack;
+                    @Struggle.started += instance.OnStruggle;
+                    @Struggle.performed += instance.OnStruggle;
+                    @Struggle.canceled += instance.OnStruggle;
                 }
             }
         }
@@ -1119,6 +1159,7 @@ namespace UnityEngine.InputSystem
             void OnDoubleTap(InputAction.CallbackContext context);
             void OnHoldTap(InputAction.CallbackContext context);
             void OnPAttack(InputAction.CallbackContext context);
+            void OnStruggle(InputAction.CallbackContext context);
         }
         public interface IUIActions
         {

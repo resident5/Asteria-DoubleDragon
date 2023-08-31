@@ -48,7 +48,6 @@ public class EnemyAttackState : EnemyState
                 else
                 {
                     enemy.anim.SetTrigger("grab");
-                    enemy.StateMachine.ChangeState(enemy.HornyState);
                 }
                 attackTimer = 0;
             }

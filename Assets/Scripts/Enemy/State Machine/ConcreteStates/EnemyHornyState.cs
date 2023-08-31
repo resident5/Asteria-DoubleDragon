@@ -5,9 +5,6 @@ using UnityEngine.Rendering.Universal;
 
 public class EnemyHornyState : EnemyState
 {
-    public float fuckMeter;
-    public float maxFuckMeter = 100;
-    public float fuckRate = 7f;
     public EnemyHornyState(Enemy e, EnemyStateMachine eState) : base(e, eState)
     {
     }
@@ -17,36 +14,25 @@ public class EnemyHornyState : EnemyState
         base.EnterState();
         enemy.anim.SetBool("move", false);
         enemy.anim.SetBool("isMatingPress", true);
-        fuckMeter = 0;
+        enemy.anim.speed = 1f;
     }
 
     public override void ExitState()
     {
         base.ExitState();
+        enemy.anim.SetBool("isMatingPress", false);
         enemy.anim.speed = 1f;
-        fuckMeter = 0;
+        enemy.fuckMeter = 0;
     }
     public override void FrameUpdate()
     {
         base.FrameUpdate();
         //Debug.Log($"Fuckmeter = {fuckMeter}");
-        fuckMeter += fuckRate * Time.deltaTime;
-        if (fuckMeter < 40f)
+        enemy.fuckMeter += enemy.fuckRate * Time.deltaTime;
+        if (enemy.fuckMeter > 40f)
         {
-            fuckRate = 7f;
-            enemy.anim.speed = 1f;
-            //Debug.Log("Fuck normal");
-        }
-        else if(fuckMeter < 70f)
-        {
-            fuckRate = 14f;
             enemy.anim.speed = 3f;
-            // Debug.Log("Fuck Faster");
-        }
-        else if(fuckMeter <= 100f)
-        {
-            fuckMeter = 0;
-            // Debug.Log("CUMMMING!!!");
+            //Debug.Log("enemy.fuck normal");
         }
         
 

@@ -48,3 +48,6 @@ TagManager:
   - name: Characters
     uniqueID: 3356441349
     locked: 0
+  - name: WorldUI
+    uniqueID: 4108657345
+    locked: 0

@@ -15,7 +15,7 @@ public class EnemyHitState : EnemyState
         base.EnterState();
         currentDelay = 0;
         
-        enemy.anim.SetTrigger("hit");
+        enemy.anim.SetTrigger("damaged");
         enemy.enemyHealthBarHandler.targetEnemy = enemy;
         enemy.enemyHealthBarHandler.gameObject.SetActive(true);
         if (enemy.enemyHealthBarHandler.targetEnemy == enemy)

@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Struggle",
+                    "type": "Button",
+                    "id": "788c89a9-7b27-430d-a513-49b241c37bd4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -214,6 +223,28 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "P Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f56ff49f-9a75-4586-800c-c174b5791fa4",
+                    "path": "<Keyboard>/a",
+                    "interactions": "Tap(duration=0.4)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Struggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1caca500-4a5e-4ad4-800d-95768e539677",
+                    "path": "<Keyboard>/d",
+                    "interactions": "Tap(duration=0.4)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Struggle",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

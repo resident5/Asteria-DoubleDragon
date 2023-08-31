@@ -79,7 +79,7 @@ public class EnemyChaseState : EnemyState
         
         var clampedPosition = new Vector2(
             Mathf.Clamp(randomPos.x, boundaryBounds.min.x + enemy.colliderOffset.x, Mathf.Abs(boundaryBounds.max.x) - enemy.colliderOffset.x),
-            Mathf.Clamp(randomPos.y, boundaryBounds.min.y, boundaryBounds.max.y - enemy.colliderOffset.y)
+            Mathf.Clamp(randomPos.y, boundaryBounds.min.y, Mathf.Abs(boundaryBounds.max.y) - enemy.colliderOffset.y)
         );
 
         return clampedPosition;
