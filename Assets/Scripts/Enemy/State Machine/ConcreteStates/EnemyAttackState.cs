@@ -70,9 +70,21 @@ public class EnemyAttackState : EnemyState
     public override void AnimationTriggerEvent(Enemy.AnimationTriggerType triggerType)
     {
         base.AnimationTriggerEvent(triggerType);
+        var playerScript = enemy.player.GetComponent<CharacterMovement>();
+
         if (triggerType == Enemy.AnimationTriggerType.ENEMYATTACKING)
         {
-            Debug.Log("Player needs to be hit");
+            playerScript.TakeDamage(enemy.attackDamage);
+
+        }
+
+        if (triggerType == Enemy.AnimationTriggerType.ENEMYGRABBING)
+        {
+            enemy.StateMachine.ChangeState(enemy.HornyState);
+            enemy.transform.position = playerScript.transform.position;
+            playerScript.targetEnemy = enemy;
+            playerScript.GetGrabbed();
+            enemy.sexMeter.gameObject.transform.SetParent(enemy.worldCanvas);
         }
     }
 }

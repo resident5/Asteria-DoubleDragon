@@ -19,5 +19,6 @@ public class SexMeter : MonoBehaviour
     void Update()
     {
         sexSlider.value = enemy.fuckMeter;
+        
     }
 }

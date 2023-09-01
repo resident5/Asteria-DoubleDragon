@@ -66,6 +66,8 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
     public float maxFuckMeter = 100;
     public float fuckRate = 2f;
 
+    public GameObject emoteObject;
+
     public EnemyHealthBarHandler enemyHealthBarHandler;
     
     public AnimationEventReceiver animationEventReceiver;
@@ -93,9 +95,10 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
         RB = GetComponentInChildren<Rigidbody2D>();
         onEnemyHit += GameController.Instance.ComboCount;
         visCheck = GetComponentInChildren<VisibilityCheck>();
-        animationEventReceiver = GetComponentInChildren<AnimationEventReceiver>();
-        animationEventReceiver.AnimationStart += HandlePlayer;
-        animationEventReceiver.AnimationEnded += HandleSexPlayer;
+        emoteObject.SetActive(false);
+        //animationEventReceiver = GetComponentInChildren<AnimationEventReceiver>();
+        //animationEventReceiver.AnimationStart += HandlePlayer;
+        //animationEventReceiver.AnimationEnded += HandleSexPlayer;
         player = GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject;
         enemyHealthBarHandler = UIController.Instance.enemyUIHandlder;
 
@@ -103,7 +106,7 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
 
     private void OnDisable()
     {
-        animationEventReceiver.AnimationStart -= HandlePlayer;
+        //animationEventReceiver.AnimationStart -= HandlePlayer;
     }
 
     // Update is called once per frame
@@ -116,7 +119,7 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
             if (CurrentLust >= MaxLust)
             {
                 isHorny = true;
-                visCheck.gameObject.GetComponent<SpriteRenderer>().material.color = Color.magenta;
+                emoteObject.gameObject.SetActive(true);
             }
         }
         // Debug.Log($"Statemachine = {StateMachine.CurrentEnemyState}");
@@ -196,42 +199,47 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
     public void AnimationTriggerEvent(AnimationTriggerType triggerType)
     {
         StateMachine.CurrentEnemyState.AnimationTriggerEvent(triggerType);
+        if(triggerType == AnimationTriggerType.ENEMYDEAD)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public enum AnimationTriggerType
     {
-        ENEMYDAMAGED,
-        ENEMYATTACKING
+        ENEMYDEAD,
+        ENEMYATTACKING,
+        ENEMYGRABBING,
+        ENEMYFUCKING
     }
 
     // Start is called before the first frame update
 
     #endregion
     
-    void HandlePlayer(AnimationEvent animationEvent)
-    {
-        var playerScript = player.GetComponent<CharacterMovement>();
-        if (IsWithinStrikingDistance)
-        {
-            if (!isHorny)
-            {
-                playerScript.TakeDamage(attackDamage);
-            }
-            else
-            {
-                StateMachine.ChangeState(HornyState);
-                transform.position = playerScript.transform.position;
-                playerScript.targetEnemy = this;
-                playerScript.GetGrabbed();
-                sexMeter.gameObject.transform.SetParent(worldCanvas);
-            }
-        }
-    }
+    //void HandlePlayer(AnimationEvent animationEvent)
+    //{
+    //    var playerScript = player.GetComponent<CharacterMovement>();
+    //    if (IsWithinStrikingDistance)
+    //    {
+    //        if (!isHorny)
+    //        {
+    //            playerScript.TakeDamage(attackDamage);
+    //        }
+    //        else
+    //        {
+    //            StateMachine.ChangeState(HornyState);
+    //            transform.position = playerScript.transform.position;
+    //            playerScript.targetEnemy = this;
+    //            playerScript.GetGrabbed();
+    //            sexMeter.gameObject.transform.SetParent(worldCanvas);
+    //        }
+    //    }
+    //}
 
-    void HandleSexPlayer(AnimationEvent animationEvent)
-    {
-        fuckMeter += fuckRate;
-    }
+    //void HandleSexPlayer(AnimationEvent animationEvent)
+    //{
+    //}
 
     public bool SetStrikingDistance(bool isWithinStrikingDistance)
     {

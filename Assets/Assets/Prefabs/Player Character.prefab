@@ -294,7 +294,7 @@ BoxCollider2D:
   m_Offset: {x: -0.052603245, y: 0.52}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.03}
+    pivot: {x: 0.6, y: 0.03}
     oldSize: {x: 1.2202228, y: 1.2488889}
     newSize: {x: 1.86, y: 1.89}
     adaptiveTilingThreshold: 0.5
@@ -381,7 +381,6 @@ GameObject:
   - component: {fileID: 1332900874062085611}
   - component: {fileID: 1332900874062085610}
   - component: {fileID: 3651371960207021781}
-  - component: {fileID: 1332900874062085609}
   m_Layer: 6
   m_Name: Player Character
   m_TagString: Untagged
@@ -476,6 +475,7 @@ MonoBehaviour:
   attackDamage: 0
   playerHealthBar: {fileID: 0}
   targetEnemy: {fileID: 0}
+  struggleRate: 1.5
   attackAudioClips:
   - {fileID: 8300000, guid: fd13f8d0057de3442b11fe6974017e31, type: 3}
   - {fileID: 8300000, guid: 6dc050e1a33fbc84789fa99b147bb8a4, type: 3}
@@ -534,33 +534,3 @@ MonoBehaviour:
   enemyColliders: []
   player: {fileID: 0}
   damage: 20
---- !u!114 &1332900874062085609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1332900874062085614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: b51b122ec4dd3b3488eedda6dd74ae2e, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Keyboard&Mouse
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}

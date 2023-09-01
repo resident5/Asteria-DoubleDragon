@@ -50,5 +50,9 @@ public class EnemyHornyState : EnemyState
     public override void AnimationTriggerEvent(Enemy.AnimationTriggerType triggerType)
     {
         base.AnimationTriggerEvent(triggerType);
+        if(triggerType == Enemy.AnimationTriggerType.ENEMYFUCKING)
+        {
+            enemy.fuckMeter += enemy.fuckRate;
+        }
     }
 }

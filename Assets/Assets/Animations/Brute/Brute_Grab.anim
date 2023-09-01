@@ -26,7 +26,7 @@ AnimationClip:
     - time: 0.4
       value: {fileID: 1043950842, guid: cb7b9988bfb76df4aa1612bcb8256413, type: 3}
     attribute: m_Sprite
-    path: 
+    path: Graphix
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 10
@@ -37,7 +37,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 962753882
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -73,9 +73,9 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.4
-    functionName: OnAnimationStart
+    functionName: AnimationTriggerEvent
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 0
+    intParameter: 2
     messageOptions: 0
