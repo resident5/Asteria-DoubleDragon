@@ -10,7 +10,7 @@ public class CharacterMovement : MonoBehaviour
 {
     public static CharacterMovement Instance;
 
-    public AnimationEventReceiver animationEventReceiver;
+    //public AnimationEventReceiver animationEventReceiver;
 
     [Header("Base")]
 
@@ -64,6 +64,12 @@ public class CharacterMovement : MonoBehaviour
     public bool running;
 
     public Animator animator;
+
+    public enum AnimationTriggerType
+    {
+        PLAYERDEAD,
+        PLAYERRESET
+    }
 
     #endregion
 
@@ -124,9 +130,12 @@ public class CharacterMovement : MonoBehaviour
 
     private void Start()
     {
-        animationEventReceiver = GetComponentInChildren<AnimationEventReceiver>();
-        animationEventReceiver.AnimationEnded += HandlePlayerReset;
+        //animationEventReceiver = GetComponentInChildren<AnimationEventReceiver>();
+        //animationEventReceiver.AnimationEnded += HandlePlayerReset;
+        //animationEventReceiver.DeathAnimationStarted += Die;
+        //animationEventReceiver.DeathAnimationEnded += Death;
         charDefaultRelPos = charRB.transform.localPosition;
+        boundaryCollider = GameObject.FindGameObjectWithTag("Boundary").GetComponent<BoxCollider2D>();
         playerHealthBar = GameObject.Find("Player Plate").GetComponent<Slider>();
         currentHealth = maxHealth;
         playerHealthBar.maxValue = maxHealth;
@@ -137,7 +146,9 @@ public class CharacterMovement : MonoBehaviour
 
     private void OnDisable()
     {
-        animationEventReceiver.AnimationEnded -= HandlePlayerReset;
+        //animationEventReceiver.AnimationEnded -= HandlePlayerReset;
+        //animationEventReceiver.DeathAnimationEnded -= Death;
+        //animationEventReceiver.DeathAnimationStarted -= Die;
     }
 
     void Update()
@@ -253,6 +264,7 @@ public class CharacterMovement : MonoBehaviour
                 wasAirborne = false;
                 animator.SetBool("isJumping", false);
                 playerState = PlayerState.NEUTRAL;
+                Debug.Log("IS THIS ON?");
             }
         }
     }
@@ -275,19 +287,37 @@ public class CharacterMovement : MonoBehaviour
 
     public void TakeDamage(int damageTaken)
     {
-        playerState = PlayerState.DAMAGED;
         currentHealth -= damageTaken;
-        animator.SetBool("hit", true);
-        // canMove = false;
         playerHealthBar.value = currentHealth;
 
         if (currentHealth <= 0)
         {
-            Debug.Log("Player Died");
+            playerState = PlayerState.DEAD;
+            animator.SetBool("isDead", true);
             //Death;
+        }else
+        {
+            playerState = PlayerState.DAMAGED;
+            animator.SetTrigger("hit");
+
         }
+        // canMove = false;
+
+
     }
-    
+
+    //public void Die(AnimationEvent animationEvent)
+    //{
+    //    playerState = PlayerState.DEAD;
+    //}
+
+    public void Death()
+    {
+        GameController.Instance.playerLastCoordinates = gameObject.transform.position;
+        GameController.Instance.isPlayerDead = true;
+        Destroy(gameObject);
+    }
+
     public void GetGrabbed()
     {
         playerState = PlayerState.GRABBED;
@@ -312,7 +342,21 @@ public class CharacterMovement : MonoBehaviour
     public void HandlePlayerReset(AnimationEvent animationEvent)
     {
         // canMove = true;
-        playerState = PlayerState.NEUTRAL;
+    }
+
+    public void AnimationTriggerEvent(AnimationTriggerType triggerType)
+    {
+        if (triggerType == AnimationTriggerType.PLAYERRESET)
+        {
+            playerState = PlayerState.NEUTRAL;
+            Debug.Log("IS THIS ON?3");
+        }
+
+        if (triggerType == AnimationTriggerType.PLAYERDEAD)
+        {
+            playerState = PlayerState.DEAD;
+            Death();
+        }
     }
 
     private void OnDrawGizmos()

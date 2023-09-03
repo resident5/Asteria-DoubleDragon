@@ -7,8 +7,6 @@ public class CharacterAttack : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.2f;
     public LayerMask enemyLayers;
-    public Animator animator;
-
     public Collider2D attackCollider;
     public ContactFilter2D contactFilter;
     public List<Collider2D> enemyColliders = new List<Collider2D>();
@@ -34,7 +32,7 @@ public class CharacterAttack : MonoBehaviour
         {
             player.playerState = CharacterMovement.PlayerState.ATTACKING;
             //Play an attack animation
-            animator.SetTrigger("Attack");
+            player.animator.SetTrigger("Attack");
 
             //Detect enemies in range of attack
             contactFilter.SetLayerMask(enemyLayers);

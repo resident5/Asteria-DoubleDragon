@@ -11,9 +11,12 @@ public class Brute : Enemy
     public Vector3 Offset => colliderOffset;
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position + Offset, MyRandomRange);
-        Gizmos.DrawLine(transform.position + Offset, player.transform.position);
+        if (player != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position + Offset, MyRandomRange);
+            Gizmos.DrawLine(transform.position + Offset, player.transform.position);
+        }
     }
 
 

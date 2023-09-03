@@ -167,7 +167,7 @@ public class PlayerInput : MonoBehaviour
             if (player.targetEnemy.fuckMeter <= 0)
             {
                 player.ReleaseGrabbed();
-                player.targetEnemy.StateMachine.ChangeState(player.targetEnemy.PatrolState);
+                player.targetEnemy.StateMachine.ChangeState(player.targetEnemy.IdleState);
             }
         }
     }

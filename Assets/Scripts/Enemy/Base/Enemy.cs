@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
     #region States Variables
 
     public EnemyStateMachine StateMachine { get; set; }
-    public EnemyPatrolState PatrolState { get; set; }
+    public EnemyIdleState IdleState { get; set; }
     public EnemyChaseState ChaseState { get; set; }
     public EnemyAttackState AttackState { get; set; }
     public EnemyHitState HitState { get; set; }
@@ -76,7 +76,7 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
     {
         StateMachine = new EnemyStateMachine();
 
-        PatrolState = new EnemyPatrolState(this, StateMachine);
+        IdleState = new EnemyIdleState(this, StateMachine);
         ChaseState = new EnemyChaseState(this, StateMachine);
         AttackState = new EnemyAttackState(this, StateMachine);
         HitState = new EnemyHitState(this, StateMachine);
@@ -88,7 +88,7 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
     {
         CurrentHealth = MaxHealth;
         CurrentLust = 0;
-        StateMachine.Initialize(PatrolState);
+        StateMachine.Initialize(IdleState);
 
 
         boundaryCollider = GameObject.FindWithTag("Boundary").GetComponent<PolygonCollider2D>();
@@ -122,7 +122,12 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMovable, ITriggerCheckable
                 emoteObject.gameObject.SetActive(true);
             }
         }
-        // Debug.Log($"Statemachine = {StateMachine.CurrentEnemyState}");
+
+        if(GameController.Instance.isPlayerDead)
+        {
+            StateMachine.ChangeState(IdleState);
+        }
+        Debug.Log($"Statemachine = {StateMachine.CurrentEnemyState}");
     }
 
     private void FixedUpdate()

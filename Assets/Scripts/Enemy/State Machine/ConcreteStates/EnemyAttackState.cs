@@ -38,27 +38,27 @@ public class EnemyAttackState : EnemyState
         }
         else
         {
-            attackTimer += Time.deltaTime;
-            if (attackTimer >= enemy.attackDelay)
+            if (CharacterMovement.Instance.playerState != CharacterMovement.PlayerState.DEAD)
             {
-                if (!enemy.isHorny)
+                attackTimer += Time.deltaTime;
+                if (attackTimer >= enemy.attackDelay)
                 {
-                    enemy.anim.SetTrigger("attack");
+                    if (!enemy.isHorny)
+                    {
+                        enemy.anim.SetTrigger("attack");
+                    }
+                    else
+                    {
+                        enemy.anim.SetTrigger("grab");
+                    }
+                    attackTimer = 0;
                 }
-                else
-                {
-                    enemy.anim.SetTrigger("grab");
-                }
-                attackTimer = 0;
             }
+        }
 
-            // if (!canAttack && Time.time - timeSinceLastAttack >= enemy.attackDelay)
-            // {
-            //     canAttack = true;
-            // }
-            // else if (canAttack)
-            // {
-            // }
+        if(GameController.Instance.isPlayerDead)
+        {
+            enemy.StateMachine.ChangeState(enemy.IdleState);
         }
     }
 

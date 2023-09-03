@@ -3,16 +3,17 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
 
-public class EnemyPatrolState : EnemyState
+public class EnemyIdleState : EnemyState
 {
     private Bounds boundaryBounds;
-    public EnemyPatrolState(Enemy e, EnemyStateMachine eState) : base(e, eState)
+    public EnemyIdleState(Enemy e, EnemyStateMachine eState) : base(e, eState)
     {
     }
 
     public override void EnterState()
     {
         base.EnterState();
+        enemy.anim.SetBool("move", false);
     }
 
     public override void ExitState()
@@ -23,7 +24,7 @@ public class EnemyPatrolState : EnemyState
     {
         base.FrameUpdate();
 
-        if (enemy.visCheck.isVisible)
+        if (enemy.visCheck.isVisible && enemy.player != null)
         {
             enemy.StateMachine.ChangeState(enemy.ChaseState);
         }

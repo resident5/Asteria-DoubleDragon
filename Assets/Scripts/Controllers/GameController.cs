@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using Unity.Mathematics;
@@ -8,11 +9,17 @@ using Random = UnityEngine.Random;
 public class GameController : MonoBehaviour
 {
     public static GameController Instance;
-    public AmbushTracker ambushTracker;
 
-    public int comboCounter = 0;
-    public float comboDelay = 1.2f;
-    public float startTime;
+    [Header("Player Tracker")]
+    public GameObject playerPrefab;
+    public bool isPlayerDead = false;
+    public Vector2 playerLastCoordinates;
+
+    public float playerRespawnTimeDelay = 1.5f;
+
+    [Header("Game Tracker")]
+
+    public GameState gameState;
 
     public enum GameState
     {
@@ -20,7 +27,20 @@ public class GameController : MonoBehaviour
         NEUTRAL,
     }
 
-    public GameState gameState;
+    public EnvironmentController environmentController;
+
+    [Header("Enemy Tracker")]
+
+    public GameObject enemySpawner;
+
+    public AmbushTracker ambushTracker;
+
+    public int comboCounter = 0;
+    public float comboDelay = 1.2f;
+    public float startTime;
+
+    
+
 
     public float spawnOffset = 2f;
     public GameObject enemyPrefab;
@@ -57,6 +77,7 @@ public class GameController : MonoBehaviour
     {
         gameState = GameState.NEUTRAL;
         enemyList = new List<GameObject>();
+        environmentController = GameObject.Find("ENVIRONMENT").GetComponent<EnvironmentController>();
     }
 
     // Update is called once per frame
@@ -77,6 +98,28 @@ public class GameController : MonoBehaviour
                 SpawnEnemyNearPlayer();
             }
         }
+
+        if(enemySpawner.transform.childCount < 1)
+        {
+            Instantiate(enemyPrefab, environmentController.spawnPoints.transform.position, quaternion.identity, enemySpawner.transform);
+        }
+
+        if (isPlayerDead == true)
+        {
+            isPlayerDead = false;
+            StartCoroutine(respawnPlayer());
+        }
+    }
+
+    private IEnumerator respawnPlayer()
+    {
+        yield return new WaitForSeconds(playerRespawnTimeDelay);
+        var respawnedPlayer = Instantiate(playerPrefab, playerLastCoordinates, quaternion.identity);
+        foreach(Transform child in enemySpawner.transform)
+        {
+            child.GetComponent<Enemy>().player = respawnedPlayer;
+        }
+
     }
 
     public void ComboCount()
